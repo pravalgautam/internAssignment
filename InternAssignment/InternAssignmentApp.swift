@@ -12,6 +12,7 @@ struct InternAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(AddProductViewModel())
         }
     }
 }

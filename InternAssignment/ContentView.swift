@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var coreDataProvider = CoreDataProvider()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+      ProductListView()
+            .environment(\.managedObjectContext, coreDataProvider.container.viewContext)
     }
 }
 

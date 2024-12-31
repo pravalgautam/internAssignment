@@ -344,9 +344,9 @@ struct FavoriteProductsView: View {
                                 Image("defaultImage")
                                     .resizable()
                                     .scaledToFill()
-                                    .frame(width: 100, height: 100) // Reduced size
+                                    .frame(width: 100, height: 100) 
                                     .background(Color.gray.opacity(0.1))
-                                    .clipShape(RoundedRectangle(cornerRadius: 8)) // Adjusted corner radius
+                                    .clipShape(RoundedRectangle(cornerRadius: 8))
                             @unknown default:
                                 EmptyView()
                             }
@@ -356,19 +356,19 @@ struct FavoriteProductsView: View {
                             // Compact Product Name
        
                                 Text(product.name ?? "Unnamed Product")
-                                    .font(.system(size: 16, weight: .semibold)) // Reduced font size
+                                    .font(.system(size: 16, weight: .semibold))
                                     .foregroundColor(.black)
-                                    .lineLimit(2) // Limit to 1 line
-                                    .truncationMode(.tail) // Truncate overflow text
+                                    .lineLimit(2)
+                                    .truncationMode(.tail)
                                 
                                 // Compact Product Price
                                 Text("₹\(String(format: "%.2f", product.price))")
-                                    .font(.system(size: 12, weight: .bold)) // Reduced font size
+                                    .font(.system(size: 12, weight: .bold))
                                     .foregroundColor(.black)
                                 
                                 // Compact Product Type
                                 Text(product.productType ?? "Unknown Type")
-                                    .font(.system(size: 10)) // Reduced font size
+                                    .font(.system(size: 10))
                                     .foregroundColor(.gray)
                      
                         }.padding(.bottom)
@@ -387,13 +387,13 @@ struct FavoriteProductsView: View {
                         .buttonStyle(PlainButtonStyle())
                         Spacer()
                     }
-                    .padding(2) // Reduced padding
+                    .padding(2)
                     .background(Color.white)
-                    .cornerRadius(8) // Adjusted corner radius
-                    .shadow(color: .gray.opacity(0.2), radius: 4, x: 0, y: 2) // Reduced shadow radius
+                    .cornerRadius(8)
+                    .shadow(color: .gray.opacity(0.2), radius: 4, x: 0, y: 2)
                 }
             }
-            .padding(.horizontal, 5) // Reduced horizontal padding
+            .padding(.horizontal, 5)
             .padding(.leading,16)
         }
     }

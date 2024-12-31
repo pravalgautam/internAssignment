@@ -13,7 +13,6 @@ import Foundation
 struct AddProductView: View {
     @StateObject private var viewModel = AddProductViewModel()
     @Environment(\.dismiss) var dismiss
-    
     @State private var isImagePickerPresented = false
     @State private var selectedFormat: String = "JPEG"
     @State private var showFormatOptions = false

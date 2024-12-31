@@ -9,11 +9,11 @@ import CoreData
 
 class CoreDataProvider: ObservableObject {
     // Persistent container for Core Data
-    static let shared = CoreDataProvider() // Singleton instance
+    static let shared = CoreDataProvider() 
     let container: NSPersistentContainer
     
     init() {
-        container = NSPersistentContainer(name: "ProductData") // Ensure this name matches your Core Data model file (.xcdatamodeld)
+        container = NSPersistentContainer(name: "ProductData")
         container.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Failed to load Core Data stack: \(error.localizedDescription)")

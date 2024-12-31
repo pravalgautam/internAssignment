@@ -173,7 +173,7 @@ class AddProductViewModel: ObservableObject {
             print("Verification failed - No products found in UserDefaults")
         }
     }
-
+    
     func printSavedProductData() {
         let userDefaults = UserDefaults.standard
         print("Attempting to read saved products...")
@@ -260,10 +260,10 @@ class AddProductViewModel: ObservableObject {
             
             // Upload to server
             uploadProductToServer(productName: productName,
-                                price: price,
-                                tax: tax,
-                                productType: productType,
-                                image: productImage) { success in
+                                  price: price,
+                                  tax: tax,
+                                  productType: productType,
+                                  image: productImage) { success in
                 if success {
                     successfulUploads.append(index)
                 }
